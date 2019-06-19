@@ -18,7 +18,7 @@ def won?(board)
 winner = nil
 empty_board = board.all? {|x| x == " "}
 WIN_COMBINATIONS.each do |winner_combination|
-    if empty_board || full?(board)
+    if empty_board
       return false
     elsif winner_combination.all? { |value| board[value] =="X" } || winner_combination.all? { |value| board[value] =="O" }
       winner = winner_combination
